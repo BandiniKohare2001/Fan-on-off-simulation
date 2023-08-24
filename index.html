@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fan on off</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            display: inline-block;
+            background-color: rgb(204, 252, 252);
+            height: 300px;
+            padding: 50px;
+            border-radius: 50px;
+        }
+        #fan{
+            height: 200px;
+            border-radius: 50%;
+        }
+        button{
+            display: inline-block;
+            margin-bottom: auto;
+            margin-right: auto;
+            width: 90px;
+            height: 40px;
+            border: none;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 20px;
+            background-color: rgb(173, 173, 253);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <img src="/fan-img.png" alt="off" id="fan">
+    <br> <br>
+    <button type="button" onclick="fanOn()">
+        ON
+    </button>
+    <button type="button" onclick="fanOff()">
+        OFF
+    </button>
+</div>
+    <script>
+        const fanElement = document.getElementById('fan');
+        function fanOn() {
+            fanElement.src = "/fan-gif.gif";
+        }
+        function fanOff() {
+            fanElement.src = "/fan-img.png";
+        }
+    </script>
+</body>
+</html>
